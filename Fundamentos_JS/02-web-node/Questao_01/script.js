@@ -1,28 +1,27 @@
-function calcular() {
-    const n1 = parseInt(document.getElementById("n1").value)
-    const n2 = parseInt(document.getElementById("n2").value)
+
+const n1 = parseFloat(prompt("Digite o numero 1:"));
+const n2 = parseFloat(prompt("Digite o numero 2:"));
+
+const op = prompt("Digite o operador(+, -,*, /):");
+
+switch (op) {
+    case '+':
+        alert(n1+n2)
+        break;
+
+    case '-':
+        alert(n1-n2)
+        break;
+
+    case '*':
+        alert(n1*n2)
+        break;
+
+    case '/':
+        alert(n1/n2)
+        break;
     
-    const op = document.getElementById("op").value
-
-    switch (op) {
-        case '1':
-            alert(n1+n2)
-            break;
-
-        case '2':
-            alert(n1-n2)
-            break;
-
-        case '3':
-            alert(n1*n2)
-            break;
-
-        case '4':
-            alert(n1/n2)
-            break;
-    
-        default:
-            alert("Poxa...")
-            break;
-    }
+    default:
+        alert("Poxa...")
+        break;
 }
