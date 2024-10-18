@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Questão 4</h1>
+    <form action="" name="form" id="form">
+        <label for="">Digite um texto:</label>
+        <input type="text" name="valor" id="valor">
+        <input type="submit" value="Enviar">
+    </form>
+
+    <a href="Questao_03.html">Anterior</a><a href="Questao_05.html">Proxima</a>
+
+    <script>
+    document.getElementById('form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const inputValue = document.getElementById('valor').value;
+        const vogais = {
+            a: 0,
+            e: 0,
+            i: 0,
+            o: 0,
+            u: 0,
+        }
+       
+        for (let i = 0; i < inputValue.length; i++) {
+
+            switch (inputValue[i]) {
+                case 'a':
+                    vogais.a += 1;
+                    break;
+                
+                case 'e':
+                    vogais.e += 1;
+                    break;
+                
+                case 'i':
+                    vogais.i += 1;
+                    break;
+                
+                case 'o':
+                    vogais.o += 1;
+                    break;
+                
+                case 'u':
+                    vogais.u += 1;
+                    break;
+            }
+        }
+
+        alert(`A: ${vogais.a} \nE: ${vogais.e} \nI: ${vogais.i} \nO: ${vogais.o} \nU: ${vogais.u}`)
+
+    });
+    </script>
+</body>
+</html>
