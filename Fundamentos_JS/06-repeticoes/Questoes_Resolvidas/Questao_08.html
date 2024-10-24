@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progressão Aritmética</title>
+</head>
+<body>
+    <h1>Calculadora de Progressão Aritmética</h1>
+    
+    <label for="n">Número de termos (n):</label>
+    <input type="number" id="n" required><br><br>
+
+    <label for="a1">Primeiro termo (a1):</label>
+    <input type="number" id="a1" required><br><br>
+
+    <label for="r">Razão (r):</label>
+    <input type="number" id="r" required><br><br>
+
+    <button onclick="calcularPA()">Calcular PA</button>
+
+    <h2>Resultados:</h2>
+    <p id="termos"></p>
+    <p id="soma"></p>
+
+    <a href="Questao_07.html">Anterior</a>
+
+    <script>
+        function calcularPA() {
+            const n = parseInt(document.getElementById('n').value);
+            const a1 = parseFloat(document.getElementById('a1').value);
+            const r = parseFloat(document.getElementById('r').value);
+
+            let termos = [];
+            let soma = 0;
+
+            for (let i = 0; i < n; i++) {
+                let termo = a1 + i * r;
+                termos.push(termo);
+                soma += termo;
+            }
+
+            document.getElementById('termos').innerText = `Termos da PA: ${termos.join(', ')}`;
+            document.getElementById('soma').innerText = `Soma dos termos: ${soma}`;
+        }
+    </script>
+</body>
+</html>

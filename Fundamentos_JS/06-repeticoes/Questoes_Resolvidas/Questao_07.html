@@ -6,26 +6,30 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Questão 5</h1>
+    <h1>Questão 7</h1>
     <form action="" name="form" id="form">
         <label for="">Digite um texto:</label>
         <input type="text" name="valor" id="valor">
         <input type="submit" value="Enviar">
     </form>
 
-    <a href="Questao_04.html">Anterior</a> <a href="Questao_06.html">Proxima</a>
+    <a href="Questao_06.html">Anterior</a> <a href="Questao_08.html">Proxima</a>
 
     <script>
+    
+    const palavra = "termo";
+    let incremento = 0;
+
     document.getElementById('form').addEventListener('submit', function(event) {
         event.preventDefault();
         const inputValue = document.getElementById('valor').value;
-        let texto = '';
+        
+        incremento += 1;
 
-        for (let i = inputValue.length - 1; i >= 0; i--) { 
-            texto += inputValue[i];
+        if (inputValue == palavra) {
+            alert("Parabens, acertou..." + "\n" + "Tentativas: " + incremento);
         }
 
-        alert(texto);
     });
     </script>
 </body>
