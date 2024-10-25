@@ -1,4 +1,12 @@
+function criarObjetos(array, f) {
+    const resultado = [];
 
+    for (const element of array) {
+        resultado.push(f(element))
+    }
+
+    return resultado;
+}
 
 // Exemplo de uso:
 let nomes = ["Alice", "Bob", "Carlos"];
